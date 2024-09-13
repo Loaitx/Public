@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة المخزون</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">نظام إدارة المخزون</h1>
+
+        <!-- تبويبات الأقسام -->
+        <div class="tabs">
+            <button class="tab-button active" data-tab="youtube">يوتيوب</button>
+            <button class="tab-button" data-tab="netflix">نتفلكس</button>
+            <button class="tab-button" data-tab="shahid">شاهد نت</button>
+        </div>
+
+        <!-- أقسام المخزون -->
+        <div id="youtube" class="tab-content active">
+            <h2>يوتيوب - إدارة المخزون</h2>
+            <form id="youtube-form">
+                <label for="youtube-customer-name">اسم المستخدم أو العميل:</label>
+                <input type="text" id="youtube-customer-name" required>
+                
+                <label for="youtube-item-quantity">الكمية:</label>
+                <input type="number" id="youtube-item-quantity" required>
+
+                <label for="youtube-subscription-start">بداية الاشتراك:</label>
+                <input type="datetime-local" id="youtube-subscription-start" required>
+
+                <label for="youtube-subscription-end">نهاية الاشتراك:</label>
+                <input type="datetime-local" id="youtube-subscription-end" required>
+
+                <label for="youtube-contact-number">رقم التواصل:</label>
+                <input type="text" id="youtube-contact-number" required>
+
+                <button type="submit">إضافة العنصر</button>
+            </form>
+            <table id="youtube-table">
+                <thead>
+                    <tr>
+                        <th>اسم المستخدم أو العميل</th>
+                        <th>الكمية</th>
+                        <th>بداية الاشتراك</th>
+                        <th>نهاية الاشتراك</th>
+                        <th>رقم التواصل</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="netflix" class="tab-content">
+            <h2>نتفلكس - إدارة المخزون</h2>
+            <form id="netflix-form">
+                <label for="netflix-customer-name">اسم المستخدم أو العميل:</label>
+                <input type="text" id="netflix-customer-name" required>
+                
+                <label for="netflix-item-quantity">الكمية:</label>
+                <input type="number" id="netflix-item-quantity" required>
+
+                <label for="netflix-subscription-start">بداية الاشتراك:</label>
+                <input type="datetime-local" id="netflix-subscription-start" required>
+
+                <label for="netflix-subscription-end">نهاية الاشتراك:</label>
+                <input type="datetime-local" id="netflix-subscription-end" required>
+
+                <label for="netflix-contact-number">رقم التواصل:</label>
+                <input type="text" id="netflix-contact-number" required>
+
+                <button type="submit">إضافة العنصر</button>
+            </form>
+            <table id="netflix-table">
+                <thead>
+                    <tr>
+                        <th>اسم المستخدم أو العميل</th>
+                        <th>الكمية</th>
+                        <th>بداية الاشتراك</th>
+                        <th>نهاية الاشتراك</th>
+                        <th>رقم التواصل</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="shahid" class="tab-content">
+            <h2>شاهد نت - إدارة المخزون</h2>
+            <form id="shahid-form">
+                <label for="shahid-customer-name">اسم المستخدم أو العميل:</label>
+                <input type="text" id="shahid-customer-name" required>
+                
+                <label for="shahid-item-quantity">الكمية:</label>
+                <input type="number" id="shahid-item-quantity" required>
+
+                <label for="shahid-subscription-start">بداية الاشتراك:</label>
+                <input type="datetime-local" id="shahid-subscription-start" required>
+
+                <label for="shahid-subscription-end">نهاية الاشتراك:</label>
+                <input type="datetime-local" id="shahid-subscription-end" required>
+
+                <label for="shahid-contact-number">رقم التواصل:</label>
+                <input type="text" id="shahid-contact-number" required>
+
+                <button type="submit">إضافة العنصر</button>
+            </form>
+            <table id="shahid-table">
+                <thead>
+                    <tr>
+                        <th>اسم المستخدم أو العميل</th>
+                        <th>الكمية</th>
+                        <th>بداية الاشتراك</th>
+                        <th>نهاية الاشتراك</th>
+                        <th>رقم التواصل</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- منطقة عرض التنبيهات -->
+        <div id="alerts">
+            <h3>التنبيهات</h3>
+            <ol id="alert-list"></ol>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>AZO.ONE © جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
